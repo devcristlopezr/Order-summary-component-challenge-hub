@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,500;0,900;1,700&display=swap');
+
+:root {
+  /*Colors*/
+
+  /*Primary*/
+
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --bright-blue-hover: hsl(245, 75%, 52%, 0.5);
+
+  /*Neutral*/
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  font-family: 'Red Hat Display', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--pale-blue);
+}
+
+.order-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.order {
+  border-radius: 15px;
+  background-color: var(--very-pale-blue);
+  width: 325px;
+}
+
+.hero-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.order-body {
+  padding: 30px 25px;
+}
+
+.order-title {
+  text-align: center;
+  margin: 0;
+  font-weight: 900;
+}
+
+.order-description {
+  text-align: center;
+  font-size: 16px;
+  color: var(--desaturated-blue);
+  line-height: 1.7;
+}
+
+.order-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 45px 0px;
+  padding: 0px 15px;
+}
+
+.order-plan {
+  display: flex;
+}
+
+.order-plan-type {
+  font-weight: 700;
+  line-height: 1.7;
+  margin-left: 20px;
+}
+
+.order-plan-type::after {
+  content: attr(plan-price);
+  display: block;
+  color: var(--desaturated-blue);
+  font-weight: 500;
+}
+
+.order-details a {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--bright-blue);
+}
+
+.order-details a:hover {
+  text-decoration: none;
+  color: var(--bright-blue-hover);
+}
+
+.order-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-payment-button {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--very-pale-blue);
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  background-color: var(--bright-blue);
+}
+
+.order-payment-button:hover {
+  background-color: var(--bright-blue-hover);
+  cursor: pointer;
+}
+
+.order-cancel-order {
+  font-weight: 700;
+  color: var(--desaturated-blue);
+  margin-top: 25px;
+}
+
+.order-cancel-order:hover {
+  cursor: pointer;
+  color: var(--dark-blue);
+}
+
+@media (min-width: 700px) {
+  .order {
+    border-radius: 15px;
+    background-color: var(--very-pale-blue);
+    width: 450px;
+  }
+  .order-body {
+    padding: 40px 50px;
+  }
+
+  .order-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0px;
+    padding: 0px 25px;
+  }
+}
